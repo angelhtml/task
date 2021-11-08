@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/jpg" href="4.jpg"/>
+    <link rel="favicon" type="image/jpg" href="2.jpg"/>
+    <meta name="keywords" content="html,meta,and other"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="stylehtml.css" >
+    <title>Document</title>
+    <style>
+.header { display: flex;      width: 100%;
+    flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #5cdb95;
+  }
+
+  .call-us{ 
+  justify-self:flex-end;
+  color: red;
+}
+.call{
+  font-weight: 700;
+  font-family: 1.3rem;
+  color: #000;
+}
+
+
+.navigation{ 
+  display:flex;
+  align-items: center;
+  background-color: #8ee4af;
+  justify-content: space-between;
+width: 100%;
+}
+
+.btn-green{   
+  text-shadow: 0px 1px 0px rgba(150, 150, 150, 1);
+    color: #fff;
+    padding: 15px 20px 15px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #4eaa65;
+    display: block;
+    max-width: 125px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    background: rgb(163,255,206);
+    background: -moz-linear-gradient(top,  rgba(163,255,206,1) 0%, rgba(100,209,128,1) 4%, rgba(64,199,107,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(163,255,206,1)), color-stop(4%,rgba(100,209,128,1)), color-stop(100%,rgba(64,199,107,1)));
+    background: -webkit-linear-gradient(top,  rgba(163,255,206,1) 0%,rgba(100,209,128,1) 4%,rgba(64,199,107,1) 100%);
+    background: -o-linear-gradient(top,  rgba(163,255,206,1) 0%,rgba(100,209,128,1) 4%,rgba(64,199,107,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(163,255,206,1) 0%,rgba(100,209,128,1) 4%,rgba(64,199,107,1) 100%);
+    background: linear-gradient(to bottom,  rgba(163,255,206,1) 0%,rgba(100,209,128,1) 4%,rgba(64,199,107,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3ffce', endColorstr='#40c76b',GradientType=0 );
+    cursor: pointer;
+  }
+
+  .btn-green:hover{
+
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(119,206,141,1) 4%, rgba(92,201,125,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(4%,rgba(119,206,141,1)), color-stop(100%,rgba(92,201,125,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(119,206,141,1) 4%,rgba(92,201,125,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(119,206,141,1) 4%,rgba(92,201,125,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(119,206,141,1) 4%,rgba(92,201,125,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(119,206,141,1) 4%,rgba(92,201,125,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#5cc97d',GradientType=0 );
+
+  }
+
+  .hi{ color:#05386b; margin: 10px;}
+
+  .btn-hero{
+
+    max-width: 250px;
+ 
+}
+
+
+  .hero{
+  height:550px;
+  background-image:url('hero.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero .overlay{
+  background-color:#000;
+  position:absolute;
+  height:100%;
+  with:100%;
+  z-index:1;
+  left:0;
+  right:0;
+  top:0;
+  opacity:0.5;
+}
+.hero .content{
+  color:#fff;
+  z-index:2;
+  text-align:center;
+}
+.hero .content h1{
+  font-size:45px;
+  font-weight:700;
+  font-family: 'Montserrat', sans-serif;
+}
+.hero .content p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    
+    flex-direction: column;
+  }
+}
+
+
+
+
+#testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+.testimonial-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.testimonial-heading span{
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.testimonial-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.testimonial-box{
+    width:500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #05386b;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.profile-img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #8ee4af;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #edf5e1;
+    font-size: 0.8rem;
+}
+.reviews{
+    color: #f9d71c;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.client-comment p{
+    font-size: 0.9rem;
+    color: #edf5e1;
+}
+.testimonial-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+ 
+@media(max-width:1060px){
+    .testimonial-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .testimonial-box{
+        width:100%;
+    }
+    .testimonial-heading h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+<div>
+
+  <i class="hi fa fa-facebook-official fa-5x"></i>
+
+  <i class="hi fa fa-twitter-square fa-5x"></i>
+<i class="hi fa fa-instagram fa-5x"></i>
+<i class="hi fa fa-github fa-5x"></i>
+<i class="hi fa fa-pinterest fa-5x"></i>
+
+</div>
+    
+
+<span  class="call-us">Call us now:<span class="call">1-555-555-5555</span></span>
+</div>
+    <div class='navigation'>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="150" height="150"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#2ecc71"><path d="M115.67,7.14875c-31.9275,6.18125 -29.5625,37.69219 -29.52219,38.00125c0.14781,1.76031 1.6125,3.07719 3.34594,3.07719c0.05375,0 0.12094,0 0.17469,0c11.20688,-0.59125 19.48438,-4.01781 24.6175,-10.18562c7.78031,-9.33906 6.08719,-22.42719 5.36156,-28.01719c-0.12094,-0.91375 -0.60469,-1.74688 -1.35719,-2.28438c-0.76594,-0.55094 -1.69313,-0.76594 -2.62031,-0.59125zM86,51.6c-17.57625,0 -21.21781,11.32781 -24.725,22.26594c-1.16906,3.62813 -2.37844,7.36375 -4.15219,11.26063c-3.17125,7.98187 -7.4175,12.9 -11.5025,17.67031c-5.77813,6.70531 -11.22031,13.02094 -11.22031,25.55812c0,23.36781 18.8125,36.765 51.6,36.765c32.7875,0 51.6,-13.41062 51.6,-36.765c0,-12.53719 -5.44219,-18.85281 -11.22031,-25.54469c-4.085,-4.77031 -8.33125,-9.70188 -11.56969,-17.845c-1.70656,-3.72219 -2.91594,-7.45781 -4.085,-11.08594c-3.50719,-10.95156 -7.14875,-22.27938 -24.725,-22.27938z"></path></g></g></svg>
+      <div style="display: flex;" >
+<div  style="justify-self:flex-end;  margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        <div  style="justify-self:flex-end;  margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        <div  style="justify-self:flex-end; margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        <div  style="justify-self:flex-end; margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        <div  style="justify-self:flex-end; margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        <div  style="justify-self:flex-end; margin: 10px;">
+          <a class="btn-green" style="width:80px"><i class="icon-key" style="font-size:19px"></i>Login Now</a><br>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>The pear</h1>
+          <p>This is best pear, huh?
+
+            <div  style="justify-self:flex-end; margin: 30px;">
+              <a class="btn-hero btn-green" style="width:250px"><i class="icon-key" style="font-size:19px"></i>Buy Now</a><br>
+            </div>
+        </div>
+        
+      </div>
+
+
+
+      <div class="cards-list">
+  
+        <div class="card 4">
+          <div class="card_image">
+            <center>
+            <i class="hi fa fa-diamond fa-5x" ></i>
+            <p style="font-size: 1.5rem;" >Specifies the relationship between the current document and the linked document</p>
+          </center>
+            </div>
+          <div class="card_title title-black">
+            <p>High Quality</p>
+          </div>
+          </div>
+        
+        <div class="card 4">
+          <div class="card_image">
+            <center>
+            <i class="hi fa fa-heart fa-5x" ></i>
+            <p style="font-size: 1.5rem;" >Specifies the relationship between the current document and the linked document</p>
+          </center>
+            </div>
+          <div class="card_title title-black">
+            <p>Awesome Taste</p>
+          </div>
+          </div>
+        
+        <div class="card 4">
+          <div class="card_image">
+            <center>
+            <i class="hi fa fa-wrench fa-5x" ></i>
+            <p style="font-size: 1.5rem;" >Specifies the relationship between the current document and the linked document</p>
+          </center>
+            </div>
+          <div class="card_title title-black">
+            <p>Latest technology</p>
+          </div>
+          </div>
+          
+          <div class="card 4">
+          <div class="card_image">
+            <center>
+            <i class="hi fa  fa-apple fa-5x" ></i>
+            <p style="font-size: 1.5rem;" >Specifies the relationship between the current document and the linked document</p>
+          </center>
+            </div>
+          <div class="card_title title-black">
+            <p>Organic</p>
+          </div>
+          </div>
+        
+        </div>
+
+        <section id="testimonials">
+          
+          <div class="testimonial-heading">
+              <span>Comments</span>
+              <h4>Clients Says</h4>
+          </div>
+          
+          <div class="testimonial-box-container">
+              
+              <div class="testimonial-box">
+                  
+                  <div class="box-top">
+                     
+                      <div class="profile">
+                         
+                          <div class="profile-img">
+                              <img src="Ninja-2-512.png" />
+                          </div>
+                         
+                          <div class="name-user">
+                              <strong>Liam mendes</strong>
+                              <span>@liammendes</span>
+                          </div>
+                      </div>
+                      
+                      <div class="reviews">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  
+                  <div class="client-comment">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                  </div>
+              </div>
+              
+              <div class="testimonial-box">
+                  
+                  <div class="box-top">
+                  
+                      <div class="profile">
+                         
+                          <div class="profile-img">
+                              <img src="Ninja-2-512.png" />
+                          </div>
+                          
+                          <div class="name-user">
+                              <strong>Noah Wood</strong>
+                              <span>@noahwood</span>
+                          </div>
+                      </div>
+                      
+                      <div class="reviews">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                
+                  <div class="client-comment">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                  </div>
+              </div>
+              
+              <div class="testimonial-box">
+                  
+                  <div class="box-top">
+                      
+                      <div class="profile">
+                       
+                          <div class="profile-img">
+                              <img src="Ninja-2-512.png" />
+                          </div>
+                         
+                          <div class="name-user">
+                              <strong>Oliver Queen</strong>
+                              <span>@oliverqueen</span>
+                          </div>
+                      </div>
+                     
+                      <div class="reviews">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  
+                  <div class="client-comment">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                  </div>
+              </div>
+              
+              <div class="testimonial-box">
+                 
+                  <div class="box-top">
+                  
+                      <div class="profile">
+                        
+                          <div class="profile-img">
+                              <img src="Ninja-2-512.png" />
+                          </div>
+                          
+                          <div class="name-user">
+                              <strong>Barry Allen</strong>
+                              <span>@barryallen</span>
+                          </div>
+                      </div>
+                     
+                      <div class="reviews">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                
+                  <div class="client-comment">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                  </div>
+              </div>
+          </div>
+        </section>
+        <script src=http://my.gblearn.com/js/loadscrip.js > </script>
+</body>
+</html>
